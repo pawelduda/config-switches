@@ -1,0 +1,6 @@
+# Gotta fix the double 'set $is_laptop_on' line
+
+echo \
+"# $(date) - event:\n"\
+"$(cat .config/sway/config | tac | rg 'set \$is_laptop_on' | awk 'NR==1 {print $(date); printf "set " $2 " "; if ($3=="disable") {printf "enable"} else if ($3=="enable") {printf "disable"}};')
+output \$laptop \$is_laptop_on" >> .config/sway/config
