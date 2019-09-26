@@ -1,4 +1,4 @@
-# Gotta fix the double 'set $is_laptop_on' line
+# FIXME: Gotta fix the double 'set $is_laptop_on' line
 
 echo \
 "# $(date) - event:\n"\

@@ -1,4 +1,5 @@
 # # Event log for sway
+# # FIXME: Handle case when no events are present (then the scripts won't work)
 #
 # ## To make it work:
 # 1) Export $CONFIG_SWITCHES_PATH variable which will point to this repo:
