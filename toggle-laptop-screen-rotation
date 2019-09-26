@@ -1,3 +1,3 @@
 echo \
 "# $(date) - event:\n"\
-"$(cat ~/.config/sway/config | tac | rg 'output \$laptop transform' | awk 'NR==1 {printf "output " $2 " transform "; if ($4=="0") {printf "270"} else if ($4=="270") {printf "0"}};')" >> ~/.config/sway/config
+"$(cat $CONFIG_SWITCHES_PATH/sway-config-event-log | tac | rg 'output \$laptop transform' | awk 'NR==1 {printf "output " $2 " transform "; if ($4=="0") {printf "270"} else if ($4=="270") {printf "0"}};')" >> $CONFIG_SWITCHES_PATH/sway-config-event-log

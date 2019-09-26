@@ -2,5 +2,5 @@
 
 echo \
 "# $(date) - event:\n"\
-"$(cat .config/sway/config | tac | rg 'set \$is_laptop_on' | awk 'NR==1 {print $(date); printf "set " $2 " "; if ($3=="disable") {printf "enable"} else if ($3=="enable") {printf "disable"}};')
-output \$laptop \$is_laptop_on" >> .config/sway/config
+"$(cat $CONFIG_SWITCHES_PATH/sway-config-event-log | tac | rg 'set \$is_laptop_on' | awk 'NR==1 {print $(date); printf "set " $2 " "; if ($3=="disable") {printf "enable"} else if ($3=="enable") {printf "disable"}};')
+output \$laptop \$is_laptop_on" >> $CONFIG_SWITCHES_PATH/sway-config-event-log
